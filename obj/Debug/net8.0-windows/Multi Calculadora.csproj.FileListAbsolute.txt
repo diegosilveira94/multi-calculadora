@@ -1,0 +1,18 @@
+C:\Users\Windows\OneDrive - SENAC-SC\2025_1\Introdução a Programação\C#\3. PROGRAMAS\EXERCICIOS\exercises-csharp\Multi Calculadora\bin\Debug\net8.0-windows\Multi Calculadora.exe
+C:\Users\Windows\OneDrive - SENAC-SC\2025_1\Introdução a Programação\C#\3. PROGRAMAS\EXERCICIOS\exercises-csharp\Multi Calculadora\bin\Debug\net8.0-windows\Multi Calculadora.deps.json
+C:\Users\Windows\OneDrive - SENAC-SC\2025_1\Introdução a Programação\C#\3. PROGRAMAS\EXERCICIOS\exercises-csharp\Multi Calculadora\bin\Debug\net8.0-windows\Multi Calculadora.runtimeconfig.json
+C:\Users\Windows\OneDrive - SENAC-SC\2025_1\Introdução a Programação\C#\3. PROGRAMAS\EXERCICIOS\exercises-csharp\Multi Calculadora\bin\Debug\net8.0-windows\Multi Calculadora.dll
+C:\Users\Windows\OneDrive - SENAC-SC\2025_1\Introdução a Programação\C#\3. PROGRAMAS\EXERCICIOS\exercises-csharp\Multi Calculadora\bin\Debug\net8.0-windows\Multi Calculadora.pdb
+C:\Users\Windows\OneDrive - SENAC-SC\2025_1\Introdução a Programação\C#\3. PROGRAMAS\EXERCICIOS\exercises-csharp\Multi Calculadora\obj\Debug\net8.0-windows\Multi_Calculadora.Form1.resources
+C:\Users\Windows\OneDrive - SENAC-SC\2025_1\Introdução a Programação\C#\3. PROGRAMAS\EXERCICIOS\exercises-csharp\Multi Calculadora\obj\Debug\net8.0-windows\Multi_Calculadora.Properties.Resources.resources
+C:\Users\Windows\OneDrive - SENAC-SC\2025_1\Introdução a Programação\C#\3. PROGRAMAS\EXERCICIOS\exercises-csharp\Multi Calculadora\obj\Debug\net8.0-windows\Multi Calculadora.csproj.GenerateResource.cache
+C:\Users\Windows\OneDrive - SENAC-SC\2025_1\Introdução a Programação\C#\3. PROGRAMAS\EXERCICIOS\exercises-csharp\Multi Calculadora\obj\Debug\net8.0-windows\Multi Calculadora.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Windows\OneDrive - SENAC-SC\2025_1\Introdução a Programação\C#\3. PROGRAMAS\EXERCICIOS\exercises-csharp\Multi Calculadora\obj\Debug\net8.0-windows\Multi Calculadora.AssemblyInfoInputs.cache
+C:\Users\Windows\OneDrive - SENAC-SC\2025_1\Introdução a Programação\C#\3. PROGRAMAS\EXERCICIOS\exercises-csharp\Multi Calculadora\obj\Debug\net8.0-windows\Multi Calculadora.AssemblyInfo.cs
+C:\Users\Windows\OneDrive - SENAC-SC\2025_1\Introdução a Programação\C#\3. PROGRAMAS\EXERCICIOS\exercises-csharp\Multi Calculadora\obj\Debug\net8.0-windows\Multi Calculadora.csproj.CoreCompileInputs.cache
+C:\Users\Windows\OneDrive - SENAC-SC\2025_1\Introdução a Programação\C#\3. PROGRAMAS\EXERCICIOS\exercises-csharp\Multi Calculadora\obj\Debug\net8.0-windows\Multi Calculadora.sourcelink.json
+C:\Users\Windows\OneDrive - SENAC-SC\2025_1\Introdução a Programação\C#\3. PROGRAMAS\EXERCICIOS\exercises-csharp\Multi Calculadora\obj\Debug\net8.0-windows\Multi Calculadora.dll
+C:\Users\Windows\OneDrive - SENAC-SC\2025_1\Introdução a Programação\C#\3. PROGRAMAS\EXERCICIOS\exercises-csharp\Multi Calculadora\obj\Debug\net8.0-windows\refint\Multi Calculadora.dll
+C:\Users\Windows\OneDrive - SENAC-SC\2025_1\Introdução a Programação\C#\3. PROGRAMAS\EXERCICIOS\exercises-csharp\Multi Calculadora\obj\Debug\net8.0-windows\Multi Calculadora.pdb
+C:\Users\Windows\OneDrive - SENAC-SC\2025_1\Introdução a Programação\C#\3. PROGRAMAS\EXERCICIOS\exercises-csharp\Multi Calculadora\obj\Debug\net8.0-windows\Multi Calculadora.genruntimeconfig.cache
+C:\Users\Windows\OneDrive - SENAC-SC\2025_1\Introdução a Programação\C#\3. PROGRAMAS\EXERCICIOS\exercises-csharp\Multi Calculadora\obj\Debug\net8.0-windows\ref\Multi Calculadora.dll
