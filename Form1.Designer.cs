@@ -36,7 +36,7 @@
             btnDivisao = new Button();
             btnVirgula = new Button();
             btn0 = new Button();
-            button7 = new Button();
+            btnMudarSinal = new Button();
             btn2 = new Button();
             btn3 = new Button();
             btn1 = new Button();
@@ -70,6 +70,7 @@
             btnIgual.TabIndex = 0;
             btnIgual.Text = "=";
             btnIgual.UseVisualStyleBackColor = false;
+            btnIgual.Click += btnIgual_Click;
             // 
             // btnSoma
             // 
@@ -85,6 +86,7 @@
             btnSoma.TabIndex = 1;
             btnSoma.Text = "+";
             btnSoma.UseVisualStyleBackColor = false;
+            btnSoma.Click += btnSoma_Click;
             // 
             // btnSubtracao
             // 
@@ -160,21 +162,23 @@
             btn0.TabIndex = 6;
             btn0.Text = "0";
             btn0.UseVisualStyleBackColor = false;
+            btn0.Click += btn0_Click;
             // 
-            // button7
+            // btnMudarSinal
             // 
-            button7.BackColor = Color.DarkOrange;
-            button7.Cursor = Cursors.Hand;
-            button7.FlatAppearance.MouseOverBackColor = Color.DarkOrange;
-            button7.FlatStyle = FlatStyle.Popup;
-            button7.Font = new Font("Arial", 20F);
-            button7.ForeColor = SystemColors.ActiveCaptionText;
-            button7.Location = new Point(12, 456);
-            button7.Name = "button7";
-            button7.Size = new Size(63, 63);
-            button7.TabIndex = 7;
-            button7.Text = "=";
-            button7.UseVisualStyleBackColor = false;
+            btnMudarSinal.BackColor = Color.DarkOrange;
+            btnMudarSinal.Cursor = Cursors.Hand;
+            btnMudarSinal.FlatAppearance.MouseOverBackColor = Color.DarkOrange;
+            btnMudarSinal.FlatStyle = FlatStyle.Popup;
+            btnMudarSinal.Font = new Font("Arial", 20F);
+            btnMudarSinal.ForeColor = SystemColors.ActiveCaptionText;
+            btnMudarSinal.Location = new Point(12, 456);
+            btnMudarSinal.Name = "btnMudarSinal";
+            btnMudarSinal.Size = new Size(63, 63);
+            btnMudarSinal.TabIndex = 7;
+            btnMudarSinal.Text = "+/-";
+            btnMudarSinal.UseVisualStyleBackColor = false;
+            btnMudarSinal.Click += btnMudarSinal_Click;
             // 
             // btn2
             // 
@@ -190,6 +194,7 @@
             btn2.TabIndex = 8;
             btn2.Text = "2";
             btn2.UseVisualStyleBackColor = false;
+            btn2.Click += btn2_Click;
             // 
             // btn3
             // 
@@ -205,6 +210,7 @@
             btn3.TabIndex = 9;
             btn3.Text = "3";
             btn3.UseVisualStyleBackColor = false;
+            btn3.Click += btn3_Click;
             // 
             // btn1
             // 
@@ -220,6 +226,7 @@
             btn1.TabIndex = 10;
             btn1.Text = "1";
             btn1.UseVisualStyleBackColor = false;
+            btn1.Click += btn1_Click;
             // 
             // btn6
             // 
@@ -235,6 +242,7 @@
             btn6.TabIndex = 11;
             btn6.Text = "6";
             btn6.UseVisualStyleBackColor = false;
+            btn6.Click += btn6_Click;
             // 
             // btn5
             // 
@@ -250,6 +258,7 @@
             btn5.TabIndex = 12;
             btn5.Text = "5";
             btn5.UseVisualStyleBackColor = false;
+            btn5.Click += btn5_Click;
             // 
             // btn4
             // 
@@ -265,6 +274,7 @@
             btn4.TabIndex = 13;
             btn4.Text = "4";
             btn4.UseVisualStyleBackColor = false;
+            btn4.Click += btn4_Click;
             // 
             // btn9
             // 
@@ -280,6 +290,7 @@
             btn9.TabIndex = 14;
             btn9.Text = "9";
             btn9.UseVisualStyleBackColor = false;
+            btn9.Click += btn9_Click;
             // 
             // btn8
             // 
@@ -295,6 +306,7 @@
             btn8.TabIndex = 15;
             btn8.Text = "8";
             btn8.UseVisualStyleBackColor = false;
+            btn8.Click += btn8_Click;
             // 
             // btn7
             // 
@@ -310,6 +322,7 @@
             btn7.TabIndex = 16;
             btn7.Text = "7";
             btn7.UseVisualStyleBackColor = false;
+            btn7.Click += btn7_Click;
             btn7.KeyDown += btn7_KeyDown;
             // 
             // btnPorcentagem
@@ -334,7 +347,7 @@
             btnApagar.Cursor = Cursors.Hand;
             btnApagar.FlatAppearance.MouseOverBackColor = Color.DarkOrange;
             btnApagar.FlatStyle = FlatStyle.Popup;
-            btnApagar.Font = new Font("Arial", 20F);
+            btnApagar.Font = new Font("Montserrat SemiBold", 17.9999981F, FontStyle.Bold);
             btnApagar.ForeColor = Color.FromArgb(255, 128, 0);
             btnApagar.Location = new Point(81, 184);
             btnApagar.Name = "btnApagar";
@@ -349,7 +362,7 @@
             btnLimpar.Cursor = Cursors.Hand;
             btnLimpar.FlatAppearance.MouseOverBackColor = Color.DarkOrange;
             btnLimpar.FlatStyle = FlatStyle.Popup;
-            btnLimpar.Font = new Font("Arial", 20F);
+            btnLimpar.Font = new Font("Montserrat SemiBold", 17.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnLimpar.ForeColor = Color.FromArgb(255, 128, 0);
             btnLimpar.Location = new Point(12, 184);
             btnLimpar.Name = "btnLimpar";
@@ -357,16 +370,17 @@
             btnLimpar.TabIndex = 19;
             btnLimpar.Text = "AC";
             btnLimpar.UseVisualStyleBackColor = false;
+            btnLimpar.Click += btnLimpar_Click;
             // 
             // lblCalcular
             // 
             lblCalcular.AutoSize = true;
             lblCalcular.Cursor = Cursors.Hand;
-            lblCalcular.Font = new Font("Arial", 14F);
+            lblCalcular.Font = new Font("Montserrat", 14.25F, FontStyle.Bold);
             lblCalcular.ForeColor = Color.White;
-            lblCalcular.Location = new Point(45, 27);
+            lblCalcular.Location = new Point(39, 23);
             lblCalcular.Name = "lblCalcular";
-            lblCalcular.Size = new Size(78, 22);
+            lblCalcular.Size = new Size(95, 30);
             lblCalcular.TabIndex = 20;
             lblCalcular.Text = "Calcular";
             // 
@@ -374,13 +388,14 @@
             // 
             lblConverter.AutoSize = true;
             lblConverter.Cursor = Cursors.Hand;
-            lblConverter.Font = new Font("Arial", 14F);
-            lblConverter.ForeColor = Color.White;
-            lblConverter.Location = new Point(150, 27);
+            lblConverter.Font = new Font("Montserrat", 14.25F, FontStyle.Bold);
+            lblConverter.ForeColor = Color.DarkGray;
+            lblConverter.Location = new Point(147, 24);
             lblConverter.Name = "lblConverter";
-            lblConverter.Size = new Size(93, 22);
+            lblConverter.Size = new Size(111, 30);
             lblConverter.TabIndex = 21;
             lblConverter.Text = "Converter";
+            lblConverter.Click += lblConverter_Click;
             // 
             // label3
             // 
@@ -394,25 +409,28 @@
             // rtbResultado
             // 
             rtbResultado.BackColor = Color.Black;
-            rtbResultado.Font = new Font("Arial", 24F);
+            rtbResultado.Font = new Font("Montserrat Medium", 17.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
             rtbResultado.ForeColor = SystemColors.Window;
             rtbResultado.Location = new Point(12, 96);
             rtbResultado.Name = "rtbResultado";
             rtbResultado.ReadOnly = true;
+            rtbResultado.RightToLeft = RightToLeft.Yes;
             rtbResultado.ScrollBars = RichTextBoxScrollBars.None;
             rtbResultado.Size = new Size(268, 82);
             rtbResultado.TabIndex = 24;
             rtbResultado.TabStop = false;
             rtbResultado.Text = "";
+            rtbResultado.TextChanged += rtbResultado_TextChanged;
             // 
             // rtbHistorico
             // 
             rtbHistorico.BackColor = Color.Black;
-            rtbHistorico.Font = new Font("Arial", 24F);
+            rtbHistorico.Font = new Font("Montserrat", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             rtbHistorico.ForeColor = SystemColors.Window;
             rtbHistorico.Location = new Point(12, 64);
             rtbHistorico.Name = "rtbHistorico";
             rtbHistorico.ReadOnly = true;
+            rtbHistorico.RightToLeft = RightToLeft.Yes;
             rtbHistorico.ScrollBars = RichTextBoxScrollBars.None;
             rtbHistorico.Size = new Size(268, 26);
             rtbHistorico.TabIndex = 25;
@@ -442,7 +460,7 @@
             Controls.Add(btn1);
             Controls.Add(btn3);
             Controls.Add(btn2);
-            Controls.Add(button7);
+            Controls.Add(btnMudarSinal);
             Controls.Add(btn0);
             Controls.Add(btnVirgula);
             Controls.Add(btnDivisao);
@@ -454,7 +472,9 @@
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Multi Calculadora";
+            Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -468,7 +488,7 @@
         private Button btnDivisao;
         private Button btnVirgula;
         private Button btn0;
-        private Button button7;
+        private Button btnMudarSinal;
         private Button btn2;
         private Button btn3;
         private Button btn1;
