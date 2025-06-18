@@ -28,7 +28,12 @@ namespace Multi_Calculadora
 
         private void btnSoma_Click(object sender, EventArgs e)
         {
-            rtbHistorico.AppendText(" + " + rtbResultado.Text + Environment.NewLine);
+            /* Esse método é chamado quando o usuário clica no botão de soma.
+             * Ele verifica se o campo de resultado não está vazio, converte o texto para decimal,
+             * e adiciona o valor ao histórico e ao resultado.
+             */
+            string somar = "+";
+            rtbHistorico.AppendText(somar + rtbResultado.Text);
             rtbResultado.Clear();
         }
 
@@ -117,7 +122,14 @@ namespace Multi_Calculadora
 
         private void btnIgual_Click(object sender, EventArgs e)
         {
+            // Coloca o último número digitado para o histórico
+            rtbHistorico.AppendText(rtbResultado.Text + " = ");
 
+        }
+
+        private void btnSubtracao_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

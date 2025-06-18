@@ -102,6 +102,7 @@
             btnSubtracao.TabIndex = 2;
             btnSubtracao.Text = "-";
             btnSubtracao.UseVisualStyleBackColor = false;
+            btnSubtracao.Click += btnSubtracao_Click;
             // 
             // btnMultiplicacao
             // 
