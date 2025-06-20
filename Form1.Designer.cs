@@ -118,6 +118,7 @@
             btnMultiplicacao.TabIndex = 3;
             btnMultiplicacao.Text = "x";
             btnMultiplicacao.UseVisualStyleBackColor = false;
+            btnMultiplicacao.Click += btnMultiplicacao_Click;
             // 
             // btnDivisao
             // 
@@ -133,6 +134,7 @@
             btnDivisao.TabIndex = 4;
             btnDivisao.Text = "÷";
             btnDivisao.UseVisualStyleBackColor = false;
+            btnDivisao.Click += btnDivisao_Click;
             // 
             // btnVirgula
             // 
@@ -348,7 +350,7 @@
             btnApagar.Cursor = Cursors.Hand;
             btnApagar.FlatAppearance.MouseOverBackColor = Color.DarkOrange;
             btnApagar.FlatStyle = FlatStyle.Popup;
-            btnApagar.Font = new Font("Montserrat SemiBold", 17.9999981F, FontStyle.Bold);
+            btnApagar.Font = new Font("Microsoft Sans Serif", 17.9999981F, FontStyle.Bold);
             btnApagar.ForeColor = Color.FromArgb(255, 128, 0);
             btnApagar.Location = new Point(81, 184);
             btnApagar.Name = "btnApagar";
@@ -363,7 +365,7 @@
             btnLimpar.Cursor = Cursors.Hand;
             btnLimpar.FlatAppearance.MouseOverBackColor = Color.DarkOrange;
             btnLimpar.FlatStyle = FlatStyle.Popup;
-            btnLimpar.Font = new Font("Montserrat SemiBold", 17.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnLimpar.Font = new Font("Microsoft Sans Serif", 17.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnLimpar.ForeColor = Color.FromArgb(255, 128, 0);
             btnLimpar.Location = new Point(12, 184);
             btnLimpar.Name = "btnLimpar";
@@ -377,11 +379,11 @@
             // 
             lblCalcular.AutoSize = true;
             lblCalcular.Cursor = Cursors.Hand;
-            lblCalcular.Font = new Font("Montserrat", 14.25F, FontStyle.Bold);
+            lblCalcular.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold);
             lblCalcular.ForeColor = Color.White;
             lblCalcular.Location = new Point(39, 23);
             lblCalcular.Name = "lblCalcular";
-            lblCalcular.Size = new Size(95, 30);
+            lblCalcular.Size = new Size(86, 24);
             lblCalcular.TabIndex = 20;
             lblCalcular.Text = "Calcular";
             // 
@@ -389,11 +391,11 @@
             // 
             lblConverter.AutoSize = true;
             lblConverter.Cursor = Cursors.Hand;
-            lblConverter.Font = new Font("Montserrat", 14.25F, FontStyle.Bold);
+            lblConverter.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold);
             lblConverter.ForeColor = Color.DarkGray;
             lblConverter.Location = new Point(147, 24);
             lblConverter.Name = "lblConverter";
-            lblConverter.Size = new Size(111, 30);
+            lblConverter.Size = new Size(101, 24);
             lblConverter.TabIndex = 21;
             lblConverter.Text = "Converter";
             lblConverter.Click += lblConverter_Click;
@@ -410,7 +412,7 @@
             // rtbResultado
             // 
             rtbResultado.BackColor = Color.Black;
-            rtbResultado.Font = new Font("Montserrat Medium", 17.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            rtbResultado.Font = new Font("Microsoft Sans Serif", 17.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
             rtbResultado.ForeColor = SystemColors.Window;
             rtbResultado.Location = new Point(12, 96);
             rtbResultado.Name = "rtbResultado";
@@ -426,7 +428,7 @@
             // rtbHistorico
             // 
             rtbHistorico.BackColor = Color.Black;
-            rtbHistorico.Font = new Font("Montserrat", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            rtbHistorico.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             rtbHistorico.ForeColor = SystemColors.Window;
             rtbHistorico.Location = new Point(12, 64);
             rtbHistorico.Name = "rtbHistorico";
@@ -437,6 +439,7 @@
             rtbHistorico.TabIndex = 25;
             rtbHistorico.TabStop = false;
             rtbHistorico.Text = "";
+            rtbHistorico.TextChanged += rtbHistorico_TextChanged;
             // 
             // Form1
             // 

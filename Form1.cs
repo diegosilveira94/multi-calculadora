@@ -1,7 +1,21 @@
+using System.Drawing;
+
 namespace Multi_Calculadora
 {
+
     public partial class Form1 : Form
     {
+        private decimal Resultado { get; set; } // Propriedade para armazenar o resultado da operação
+        private decimal Valor { get; set; } // Propriedade para armazenar o primeiro valor da operação
+        private Operacao OperacaoSelecionada { get; set; } // Propriedade para armazenar a operação selecionada pelo usuário
+
+        enum Operacao // Enumeração para definir as operações disponíveis na calculadora
+        {
+            Adicao,
+            Subtracao,
+            Multiplicacao,
+            Divisao
+        }
         public Form1()
         {
             InitializeComponent();
@@ -25,18 +39,6 @@ namespace Multi_Calculadora
         {
 
         }
-
-        private void btnSoma_Click(object sender, EventArgs e)
-        {
-            /* Esse método é chamado quando o usuário clica no botão de soma.
-             * Ele verifica se o campo de resultado não está vazio, converte o texto para decimal,
-             * e adiciona o valor ao histórico e ao resultado.
-             */
-            string somar = "+";
-            rtbHistorico.AppendText(somar + rtbResultado.Text);
-            rtbResultado.Clear();
-        }
-
         private void btnLimpar_Click(object sender, EventArgs e)
         {
             rtbResultado.Clear();
@@ -124,12 +126,62 @@ namespace Multi_Calculadora
         {
             // Coloca o último número digitado para o histórico
             rtbHistorico.AppendText(rtbResultado.Text + " = ");
-
+            switch (OperacaoSelecionada) //Verifica qual operação foi selecinada
+            {
+                case Operacao.Adicao:
+                    Resultado = Valor + Convert.ToDecimal(rtbHistorico.Text); // Realiza a adição
+                    break;
+                case Operacao.Subtracao:
+                    Resultado = Valor - Convert.ToDecimal(rtbHistorico.Text); // Realiza a subtração
+                    break;
+                case Operacao.Multiplicacao:
+                    Resultado = Valor * Convert.ToDecimal(rtbHistorico.Text); // Realiza a muliplicação
+                    break;
+                case Operacao.Divisao:
+                    Resultado = Valor / Convert.ToDecimal(rtbHistorico.Text); // Realiza a divisão
+                    break;
+            }
         }
 
         private void btnSubtracao_Click(object sender, EventArgs e)
         {
+            OperacaoSelecionada = Operacao.Subtracao; //Guarda a operação selecionada como subtração na propriedade OperacaoSelecionada
+            Valor = Convert.ToDecimal(rtbResultado.Text); // Converte o texto do campo de resultado para decimal e armazena na propriedade Valor
+            rtbHistorico.AppendText(rtbResultado.Text + " - "); // Add o texto do campo de resultado ao histórico com o sinal de subtração
+            rtbResultado.Text = ""; // Limpa o campo de resultado
+        }
+
+        private void btnMultiplicacao_Click(object sender, EventArgs e)
+        {
+
+            OperacaoSelecionada = Operacao.Multiplicacao; //Guarda a operação selecionada como multiplicação na propriedade OperacaoSelecionada
+            Valor = Convert.ToDecimal(rtbResultado.Text); // Converte o texto do campo de resultado para decimal e armazena na propriedade Valor
+            rtbResultado.Text = ""; // Limpa o campo de resultado
+            rtbHistorico.AppendText(rtbResultado.Text + " * "); // Add o texto do campo de resultado ao histórico com o sinal de multiplicação
+        }
+
+        private void btnDivisao_Click(object sender, EventArgs e)
+        {
+            OperacaoSelecionada = Operacao.Divisao; // Guarda a operação selecionada como divisão na propriedade OperacaoSelecionada
+            Valor = Convert.ToDecimal(rtbResultado.Text); // Converte o texto do campo de resultado para decimal e armazena na propriedade Valor
+            rtbHistorico.AppendText(rtbResultado.Text + " / "); // Add o texto do campo de resultado ao histórico com o sinal de divisão
+            rtbResultado.Text = ""; // Limpa o campo de resultado
+        }
+        private void btnSoma_Click(object sender, EventArgs e)
+        {
+            OperacaoSelecionada = Operacao.Adicao; //Guarda a operação selecionada como multiplicação na propriedade OperacaoSelecionada
+            Valor = Convert.ToDecimal(rtbResultado.Text); // Converte o texto do campo de resultado para decimal e armazena na propriedade Valor
+            rtbHistorico.AppendText(rtbResultado.Text + " + "); // Add o texto do campo de resultado ao histórico com o sinal de adição
+            rtbResultado.Text = ""; // Limpa o campo de resultado
             
+            //string somar = "+";
+            //rtbHistorico.AppendText(somar + rtbResultado.Text);
+            //rtbResultado.Clear();
+        }
+
+        private void rtbHistorico_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
