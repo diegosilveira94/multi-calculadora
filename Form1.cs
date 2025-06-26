@@ -124,23 +124,25 @@ namespace Multi_Calculadora
 
         private void btnIgual_Click(object sender, EventArgs e)
         {
-            // Coloca o último número digitado para o histórico
-            rtbHistorico.AppendText(rtbResultado.Text + " = ");
-            switch (OperacaoSelecionada) //Verifica qual operação foi selecinada
-            {
-                case Operacao.Adicao:
-                    Resultado = Valor + Convert.ToDecimal(rtbHistorico.Text); // Realiza a adição
-                    break;
-                case Operacao.Subtracao:
-                    Resultado = Valor - Convert.ToDecimal(rtbHistorico.Text); // Realiza a subtração
-                    break;
-                case Operacao.Multiplicacao:
-                    Resultado = Valor * Convert.ToDecimal(rtbHistorico.Text); // Realiza a muliplicação
-                    break;
-                case Operacao.Divisao:
-                    Resultado = Valor / Convert.ToDecimal(rtbHistorico.Text); // Realiza a divisão
-                    break;
-            }
+            rtbHistorico.Text = ""; // Limpa o campo do historico
+            //Resultado = Valor
+            //rtbHistorico.AppendText(" = " + rtbResultado.Text); // Coloca o último número digitado para o histórico
+            //switch (OperacaoSelecionada) //Verifica qual operação foi selecinada
+            //{
+            //    case Operacao.Adicao:
+            //        Resultado = Valor + Convert.ToDecimal(rtbHistorico.Text); // Realiza a adição
+            //        break;
+            //    case Operacao.Subtracao:
+            //        Resultado = Valor - Convert.ToDecimal(rtbHistorico.Text); // Realiza a subtração
+            //        break;
+            //    case Operacao.Multiplicacao:
+            //        Resultado = Valor * Convert.ToDecimal(rtbHistorico.Text); // Realiza a muliplicação
+            //        break;
+            //    case Operacao.Divisao:
+            //        Resultado = Valor / Convert.ToDecimal(rtbHistorico.Text); // Realiza a divisão
+            //        break;
+            //}
+            //rtbHistorico.Text = Convert.ToString(Resultado); // Converte o resultado para string e exibe no campo de resultado
         }
 
         private void btnSubtracao_Click(object sender, EventArgs e)
@@ -155,16 +157,16 @@ namespace Multi_Calculadora
         {
 
             OperacaoSelecionada = Operacao.Multiplicacao; //Guarda a operação selecionada como multiplicação na propriedade OperacaoSelecionada
-            Valor = Convert.ToDecimal(rtbResultado.Text); // Converte o texto do campo de resultado para decimal e armazena na propriedade Valor
+            Valor = Convert.ToDecimal(rtbResultado.Text); // Converte o texto do campo de resultado para decimal e armazena na propriedade 
+            rtbHistorico.AppendText(rtbResultado.Text + " x "); // Add o texto do campo de resultado ao histórico com o sinal de multiplicação
             rtbResultado.Text = ""; // Limpa o campo de resultado
-            rtbHistorico.AppendText(rtbResultado.Text + " * "); // Add o texto do campo de resultado ao histórico com o sinal de multiplicação
         }
 
         private void btnDivisao_Click(object sender, EventArgs e)
         {
             OperacaoSelecionada = Operacao.Divisao; // Guarda a operação selecionada como divisão na propriedade OperacaoSelecionada
             Valor = Convert.ToDecimal(rtbResultado.Text); // Converte o texto do campo de resultado para decimal e armazena na propriedade Valor
-            rtbHistorico.AppendText(rtbResultado.Text + " / "); // Add o texto do campo de resultado ao histórico com o sinal de divisão
+            rtbHistorico.AppendText(rtbResultado.Text + " ÷ "); // Add o texto do campo de resultado ao histórico com o sinal de divisão
             rtbResultado.Text = ""; // Limpa o campo de resultado
         }
         private void btnSoma_Click(object sender, EventArgs e)

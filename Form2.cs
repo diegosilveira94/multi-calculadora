@@ -38,5 +38,12 @@ namespace Multi_Calculadora
         {
 
         }
+
+        private void ptbMoeda_Click(object sender, EventArgs e)
+        {
+            Form converter = new Form3();
+            converter.Show();
+            this.Visible = false;
+        }
     }
 }

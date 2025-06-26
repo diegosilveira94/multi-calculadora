@@ -83,6 +83,16 @@ namespace Multi_Calculadora.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap IMC {
+            get {
+                object obj = ResourceManager.GetObject("IMC", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap moeda {
             get {
                 object obj = ResourceManager.GetObject("moeda", resourceCulture);

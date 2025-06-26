@@ -31,9 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             lblConverter = new Label();
             lblCalcular = new Label();
-            btnMoeda = new Button();
-            button1 = new Button();
-            button2 = new Button();
+            ptbMoeda = new PictureBox();
+            ptbTemperatura = new PictureBox();
+            ptbImc = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)ptbMoeda).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ptbTemperatura).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ptbImc).BeginInit();
             SuspendLayout();
             // 
             // lblConverter
@@ -62,51 +65,33 @@
             lblCalcular.Text = "Calcular";
             lblCalcular.Click += lblCalcular_Click;
             // 
-            // btnMoeda
+            // ptbMoeda
             // 
-            btnMoeda.AccessibleRole = AccessibleRole.Animation;
-            btnMoeda.AutoSize = true;
-            btnMoeda.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            btnMoeda.FlatAppearance.BorderColor = Color.White;
-            btnMoeda.FlatAppearance.BorderSize = 0;
-            btnMoeda.Image = Properties.Resources.moeda;
-            btnMoeda.Location = new Point(16, 118);
-            btnMoeda.Margin = new Padding(0);
-            btnMoeda.Name = "btnMoeda";
-            btnMoeda.Size = new Size(78, 78);
-            btnMoeda.TabIndex = 24;
-            btnMoeda.UseVisualStyleBackColor = true;
-            btnMoeda.Click += btnMoeda_Click;
+            ptbMoeda.Image = Properties.Resources.moeda;
+            ptbMoeda.Location = new Point(23, 120);
+            ptbMoeda.Name = "ptbMoeda";
+            ptbMoeda.Size = new Size(79, 76);
+            ptbMoeda.TabIndex = 27;
+            ptbMoeda.TabStop = false;
+            ptbMoeda.Click += ptbMoeda_Click;
             // 
-            // button1
+            // ptbTemperatura
             // 
-            button1.AccessibleRole = AccessibleRole.Animation;
-            button1.AutoSize = true;
-            button1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            button1.FlatAppearance.BorderColor = Color.White;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.Image = Properties.Resources.temperatura;
-            button1.Location = new Point(107, 118);
-            button1.Margin = new Padding(0);
-            button1.Name = "button1";
-            button1.Size = new Size(78, 78);
-            button1.TabIndex = 25;
-            button1.UseVisualStyleBackColor = true;
+            ptbTemperatura.Image = Properties.Resources.temperatura;
+            ptbTemperatura.Location = new Point(108, 120);
+            ptbTemperatura.Name = "ptbTemperatura";
+            ptbTemperatura.Size = new Size(79, 76);
+            ptbTemperatura.TabIndex = 28;
+            ptbTemperatura.TabStop = false;
             // 
-            // button2
+            // ptbImc
             // 
-            button2.AccessibleRole = AccessibleRole.Animation;
-            button2.AutoSize = true;
-            button2.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            button2.FlatAppearance.BorderColor = Color.White;
-            button2.FlatAppearance.BorderSize = 0;
-            button2.Image = (Image)resources.GetObject("button2.Image");
-            button2.Location = new Point(198, 118);
-            button2.Margin = new Padding(0);
-            button2.Name = "button2";
-            button2.Size = new Size(78, 78);
-            button2.TabIndex = 26;
-            button2.UseVisualStyleBackColor = true;
+            ptbImc.Image = Properties.Resources.IMC;
+            ptbImc.Location = new Point(193, 120);
+            ptbImc.Name = "ptbImc";
+            ptbImc.Size = new Size(79, 76);
+            ptbImc.TabIndex = 29;
+            ptbImc.TabStop = false;
             // 
             // Form2
             // 
@@ -114,9 +99,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.WindowText;
             ClientSize = new Size(292, 542);
-            Controls.Add(button2);
-            Controls.Add(button1);
-            Controls.Add(btnMoeda);
+            Controls.Add(ptbImc);
+            Controls.Add(ptbTemperatura);
+            Controls.Add(ptbMoeda);
             Controls.Add(lblConverter);
             Controls.Add(lblCalcular);
             Icon = (Icon)resources.GetObject("$this.Icon");
@@ -124,6 +109,9 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Multi Calculadora";
             Load += Form2_Load;
+            ((System.ComponentModel.ISupportInitialize)ptbMoeda).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ptbTemperatura).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ptbImc).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -132,8 +120,8 @@
 
         private Label lblConverter;
         private Label lblCalcular;
-        private Button btnMoeda;
-        private Button button1;
-        private Button button2;
+        private PictureBox ptbMoeda;
+        private PictureBox ptbTemperatura;
+        private PictureBox ptbImc;
     }
 }

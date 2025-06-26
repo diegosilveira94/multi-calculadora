@@ -92,3 +92,4 @@ C:\Users\Windows\Source\Repos\multi-calculadora\obj\Debug\net8.0-windows\refint\
 C:\Users\Windows\Source\Repos\multi-calculadora\obj\Debug\net8.0-windows\Multi Calculadora.pdb
 C:\Users\Windows\Source\Repos\multi-calculadora\obj\Debug\net8.0-windows\Multi Calculadora.genruntimeconfig.cache
 C:\Users\Windows\Source\Repos\multi-calculadora\obj\Debug\net8.0-windows\ref\Multi Calculadora.dll
+C:\Users\diego.silveira\Documents\multi-calculadora\obj\Debug\net8.0-windows\Multi_Calculadora.Form3.resources

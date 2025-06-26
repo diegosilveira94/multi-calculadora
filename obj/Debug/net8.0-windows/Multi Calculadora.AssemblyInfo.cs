@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Multi Calculadora")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+65ab4d3bc0df31f9b4b936a624e5ccdd212a93b0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+818a084c38358da035106feac0c8b630f27ad862")]
 [assembly: System.Reflection.AssemblyProductAttribute("Multi Calculadora")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Multi Calculadora")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

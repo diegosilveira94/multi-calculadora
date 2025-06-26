@@ -433,7 +433,7 @@
             rtbHistorico.Location = new Point(12, 64);
             rtbHistorico.Name = "rtbHistorico";
             rtbHistorico.ReadOnly = true;
-            rtbHistorico.RightToLeft = RightToLeft.Yes;
+            rtbHistorico.RightToLeft = RightToLeft.No;
             rtbHistorico.ScrollBars = RichTextBoxScrollBars.None;
             rtbHistorico.Size = new Size(268, 26);
             rtbHistorico.TabIndex = 25;
