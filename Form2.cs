@@ -24,22 +24,19 @@ namespace Multi_Calculadora
             this.Visible = false;
         }
 
-        private void btnMoeda_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form2_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void lblConverter_Click(object sender, EventArgs e)
         {
 
         }
 
         private void ptbMoeda_Click(object sender, EventArgs e)
+        {
+            Form converter = new Form5();
+            converter.Show();
+            this.Visible = false;
+        }
+
+        private void ptbTemperatura_Click(object sender, EventArgs e)
         {
             Form converter = new Form3();
             converter.Show();

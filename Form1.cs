@@ -1,3 +1,4 @@
+using System.Data;
 using System.Drawing;
 
 namespace Multi_Calculadora
@@ -124,7 +125,22 @@ namespace Multi_Calculadora
 
         private void btnIgual_Click(object sender, EventArgs e)
         {
-            rtbHistorico.Text = ""; // Limpa o campo do historico
+            try
+            {
+                rtbHistorico.Text += rtbResultado.Text;
+
+                var resultado = new DataTable().Compute(rtbHistorico.Text, null);
+                rtbResultado.Text = resultado.ToString();
+                rtbHistorico.Text = ""; // Limpa para a próxima operação
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro: " + ex.Message);
+            }
+            //rtbHistorico.Text += rtbResultado.Text;
+            //rtbResultado.Text = ""; // Limpa o campo do historico
+            //Resultado = Convert.ToInt32(rtbHistorico.Text); // Converte o texto do campo de histórico para inteiro
+            //rtbResultado.Text = Convert.ToString(Resultado); // Converte o resultado para string e exibe no campo de resultado
             //Resultado = Valor
             //rtbHistorico.AppendText(" = " + rtbResultado.Text); // Coloca o último número digitado para o histórico
             //switch (OperacaoSelecionada) //Verifica qual operação foi selecinada

@@ -43,11 +43,11 @@
             // 
             lblConverter.AutoSize = true;
             lblConverter.Cursor = Cursors.Hand;
-            lblConverter.Font = new Font("Montserrat", 14.25F, FontStyle.Bold);
+            lblConverter.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold);
             lblConverter.ForeColor = Color.White;
             lblConverter.Location = new Point(145, 29);
             lblConverter.Name = "lblConverter";
-            lblConverter.Size = new Size(111, 30);
+            lblConverter.Size = new Size(101, 24);
             lblConverter.TabIndex = 23;
             lblConverter.Text = "Converter";
             lblConverter.Click += lblConverter_Click;
@@ -56,17 +56,18 @@
             // 
             lblCalcular.AutoSize = true;
             lblCalcular.Cursor = Cursors.Hand;
-            lblCalcular.Font = new Font("Montserrat", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblCalcular.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblCalcular.ForeColor = Color.DarkGray;
             lblCalcular.Location = new Point(38, 29);
             lblCalcular.Name = "lblCalcular";
-            lblCalcular.Size = new Size(95, 30);
+            lblCalcular.Size = new Size(86, 24);
             lblCalcular.TabIndex = 22;
             lblCalcular.Text = "Calcular";
             lblCalcular.Click += lblCalcular_Click;
             // 
             // ptbMoeda
             // 
+            ptbMoeda.Cursor = Cursors.Hand;
             ptbMoeda.Image = Properties.Resources.moeda;
             ptbMoeda.Location = new Point(23, 120);
             ptbMoeda.Name = "ptbMoeda";
@@ -77,15 +78,18 @@
             // 
             // ptbTemperatura
             // 
+            ptbTemperatura.Cursor = Cursors.Hand;
             ptbTemperatura.Image = Properties.Resources.temperatura;
             ptbTemperatura.Location = new Point(108, 120);
             ptbTemperatura.Name = "ptbTemperatura";
             ptbTemperatura.Size = new Size(79, 76);
             ptbTemperatura.TabIndex = 28;
             ptbTemperatura.TabStop = false;
+            ptbTemperatura.Click += ptbTemperatura_Click;
             // 
             // ptbImc
             // 
+            ptbImc.Cursor = Cursors.Hand;
             ptbImc.Image = Properties.Resources.IMC;
             ptbImc.Location = new Point(193, 120);
             ptbImc.Name = "ptbImc";
@@ -108,7 +112,6 @@
             Name = "Form2";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Multi Calculadora";
-            Load += Form2_Load;
             ((System.ComponentModel.ISupportInitialize)ptbMoeda).EndInit();
             ((System.ComponentModel.ISupportInitialize)ptbTemperatura).EndInit();
             ((System.ComponentModel.ISupportInitialize)ptbImc).EndInit();

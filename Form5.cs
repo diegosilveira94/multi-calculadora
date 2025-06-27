@@ -7,17 +7,44 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Net.Http; // Importa o namespace necessário para fazer requisições HTTP
+using Newtonsoft.Json; // Importa o namespace necessário para manipulação de JSON
 
 namespace Multi_Calculadora
 {
-    public partial class Form3 : Form
+
+    public partial class Form5 : Form
     {
+        private async void btnConverter_Click(object sender, EventArgs e)
+        {
+            // Método que consome a API de conversão de moeda e exibe o resultado na interface do usuário
+            using (HttpClient client = new HttpClient())
+            {
+                string url = "https://economia.awesomeapi.com.br/json/last/USD-BRL";
+
+                try
+                {
+                    string response = await client.GetStringAsync(url);
+                    dynamic resultado = JsonConvert.DeserializeObject(response);
+                    decimal cotacao = Convert.ToDecimal(resultado.USDBRL.bid.ToString().Replace(".", ","));
+
+                    decimal valorEmReal = Convert.ToDecimal(rtbMoeda1.Text);
+                    decimal valorEmDolar = valorEmReal / cotacao;
+
+                    rtbMoeda2.Text = valorEmDolar.ToString("F2");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro na conversão: " + ex.Message);
+                }
+            }
+        }
         bool limparTexto = true; // Variável para controlar se o texto deve ser limpo ao inserir um novo número
         bool botaoInverter = false; // Variável para controlar o estado do botão de trocar sinal
 
         public decimal Resultado { get; private set; }
 
-        public Form3()
+        public Form5()
         {
             InitializeComponent();
             btn0.Click += BotaoNumero_Click;
@@ -34,7 +61,7 @@ namespace Multi_Calculadora
 
         private void rtbTemp1_TextChanged(object sender, EventArgs e)
         {
-            rtbTemp2.Clear();
+            rtbMoeda2.Clear();
         }
 
         private void lblVoltar_Click(object sender, EventArgs e)
@@ -60,12 +87,12 @@ namespace Multi_Calculadora
         {
             if (limparTexto)
             {
-                rtbTemp1.Clear();
+                rtbMoeda1.Clear();
                 limparTexto = false;
             }
 
             Button botao = (Button)sender;
-            rtbTemp1.Text += botao.Text;
+            rtbMoeda1.Text += botao.Text;
         }
 
         private void btn0_Click(object sender, EventArgs e)
@@ -120,16 +147,16 @@ namespace Multi_Calculadora
 
         private void btnApagar_Click(object sender, EventArgs e)
         {
-            rtbTemp1.Clear();
-            rtbTemp2.Clear();
+            rtbMoeda1.Clear();
+            rtbMoeda2.Clear();
         }
 
-        private void btnConverter_Click(object sender, EventArgs e)
-        {
-            Resultado = Convert.ToDecimal(rtbTemp1.Text); // Converte o texto do campo de entrada para decimal
-            Resultado = (Resultado * 9 / 5) + 32; // Converte Celsius para Fahrenheit
-            rtbTemp2.Text = Resultado.ToString("F1"); // Exibe o resultado formatado com duas casas decimais
-        }
+        ////private void btnConverter_Click(object sender, EventArgs e)
+        //{
+        //    Resultado = Convert.ToDecimal(rtbTemp1.Text); // Converte o texto do campo de entrada para decimal
+        //    Resultado = (Resultado * 9 / 5) + 32; // Converte Celsius para Fahrenheit
+        //    rtbTemp2.Text = Resultado.ToString("F1"); // Exibe o resultado formatado com duas casas decimais
+        //}
 
         private void btnInverter_Click(object sender, EventArgs e)
         {

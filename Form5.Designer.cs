@@ -1,6 +1,6 @@
 ﻿namespace Multi_Calculadora
 {
-    partial class Form3
+    partial class Form5
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form5));
             btnApagar = new Button();
             btn7 = new Button();
             btn8 = new Button();
@@ -42,12 +42,12 @@
             btnConverter = new Button();
             btn0 = new Button();
             label3 = new Label();
-            rtbTemp1 = new RichTextBox();
+            rtbMoeda1 = new RichTextBox();
             lblConverter = new Label();
             lblVoltar = new Label();
             btnVirgula = new Button();
             btnInverter = new Button();
-            rtbTemp2 = new RichTextBox();
+            rtbMoeda2 = new RichTextBox();
             SuspendLayout();
             // 
             // btnApagar
@@ -252,33 +252,33 @@
             label3.TabIndex = 51;
             label3.Text = "© Diego Silveira";
             // 
-            // rtbTemp1
+            // rtbMoeda1
             // 
-            rtbTemp1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            rtbTemp1.BackColor = Color.Black;
-            rtbTemp1.Cursor = Cursors.IBeam;
-            rtbTemp1.Font = new Font("Microsoft Sans Serif", 17.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            rtbTemp1.ForeColor = SystemColors.InactiveCaption;
-            rtbTemp1.Location = new Point(37, 64);
-            rtbTemp1.Multiline = false;
-            rtbTemp1.Name = "rtbTemp1";
-            rtbTemp1.ScrollBars = RichTextBoxScrollBars.None;
-            rtbTemp1.Size = new Size(201, 47);
-            rtbTemp1.TabIndex = 52;
-            rtbTemp1.TabStop = false;
-            rtbTemp1.Text = "℃";
-            rtbTemp1.TextChanged += rtbTemp1_TextChanged;
+            rtbMoeda1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            rtbMoeda1.BackColor = Color.Black;
+            rtbMoeda1.Cursor = Cursors.IBeam;
+            rtbMoeda1.Font = new Font("Microsoft Sans Serif", 17.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            rtbMoeda1.ForeColor = SystemColors.InactiveCaption;
+            rtbMoeda1.Location = new Point(37, 64);
+            rtbMoeda1.Multiline = false;
+            rtbMoeda1.Name = "rtbMoeda1";
+            rtbMoeda1.ScrollBars = RichTextBoxScrollBars.None;
+            rtbMoeda1.Size = new Size(201, 47);
+            rtbMoeda1.TabIndex = 52;
+            rtbMoeda1.TabStop = false;
+            rtbMoeda1.Text = "Real";
+            rtbMoeda1.TextChanged += rtbTemp1_TextChanged;
             // 
             // lblConverter
             // 
             lblConverter.AutoSize = true;
             lblConverter.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold);
             lblConverter.ForeColor = Color.White;
-            lblConverter.Location = new Point(73, 18);
+            lblConverter.Location = new Point(104, 21);
             lblConverter.Name = "lblConverter";
-            lblConverter.Size = new Size(129, 24);
+            lblConverter.Size = new Size(74, 24);
             lblConverter.TabIndex = 54;
-            lblConverter.Text = "Temperatura";
+            lblConverter.Text = "Moeda";
             // 
             // lblVoltar
             // 
@@ -326,32 +326,32 @@
             btnInverter.UseVisualStyleBackColor = false;
             btnInverter.Click += btnInverter_Click;
             // 
-            // rtbTemp2
+            // rtbMoeda2
             // 
-            rtbTemp2.BackColor = Color.Black;
-            rtbTemp2.Cursor = Cursors.IBeam;
-            rtbTemp2.Font = new Font("Microsoft Sans Serif", 17.95F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            rtbTemp2.ForeColor = SystemColors.InactiveCaption;
-            rtbTemp2.Location = new Point(37, 117);
-            rtbTemp2.Multiline = false;
-            rtbTemp2.Name = "rtbTemp2";
-            rtbTemp2.ScrollBars = RichTextBoxScrollBars.None;
-            rtbTemp2.Size = new Size(201, 47);
-            rtbTemp2.TabIndex = 56;
-            rtbTemp2.TabStop = false;
-            rtbTemp2.Text = "℉";
+            rtbMoeda2.BackColor = Color.Black;
+            rtbMoeda2.Cursor = Cursors.IBeam;
+            rtbMoeda2.Font = new Font("Microsoft Sans Serif", 17.95F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            rtbMoeda2.ForeColor = SystemColors.InactiveCaption;
+            rtbMoeda2.Location = new Point(37, 117);
+            rtbMoeda2.Multiline = false;
+            rtbMoeda2.Name = "rtbMoeda2";
+            rtbMoeda2.ScrollBars = RichTextBoxScrollBars.None;
+            rtbMoeda2.Size = new Size(201, 47);
+            rtbMoeda2.TabIndex = 56;
+            rtbMoeda2.TabStop = false;
+            rtbMoeda2.Text = "Dólar";
             // 
-            // Form3
+            // Form5
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.WindowText;
             ClientSize = new Size(277, 534);
-            Controls.Add(rtbTemp2);
+            Controls.Add(rtbMoeda2);
             Controls.Add(btnInverter);
             Controls.Add(lblConverter);
             Controls.Add(lblVoltar);
-            Controls.Add(rtbTemp1);
+            Controls.Add(rtbMoeda1);
             Controls.Add(label3);
             Controls.Add(btnApagar);
             Controls.Add(btn7);
@@ -367,9 +367,9 @@
             Controls.Add(btn0);
             Controls.Add(btnVirgula);
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Name = "Form3";
+            Name = "Form5";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Temperatura";
+            Text = "Moeda";
             ResumeLayout(false);
             PerformLayout();
         }
@@ -388,11 +388,11 @@
         private Button btnConverter;
         private Button btn0;
         private Label label3;
-        private RichTextBox rtbTemp1;
+        private RichTextBox rtbMoeda1;
         private Label lblConverter;
         private Label lblVoltar;
         private Button btnVirgula;
         private Button btnInverter;
-        private RichTextBox rtbTemp2;
+        private RichTextBox rtbMoeda2;
     }
 }
