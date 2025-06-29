@@ -326,7 +326,6 @@
             btn7.Text = "7";
             btn7.UseVisualStyleBackColor = false;
             btn7.Click += btn7_Click;
-            btn7.KeyDown += btn7_KeyDown;
             // 
             // btnPorcentagem
             // 
@@ -415,6 +414,7 @@
             rtbResultado.Font = new Font("Microsoft Sans Serif", 17.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
             rtbResultado.ForeColor = SystemColors.Window;
             rtbResultado.Location = new Point(12, 96);
+            rtbResultado.Multiline = false;
             rtbResultado.Name = "rtbResultado";
             rtbResultado.ReadOnly = true;
             rtbResultado.RightToLeft = RightToLeft.Yes;
@@ -431,6 +431,7 @@
             rtbHistorico.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             rtbHistorico.ForeColor = SystemColors.Window;
             rtbHistorico.Location = new Point(12, 64);
+            rtbHistorico.Multiline = false;
             rtbHistorico.Name = "rtbHistorico";
             rtbHistorico.ReadOnly = true;
             rtbHistorico.RightToLeft = RightToLeft.No;

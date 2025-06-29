@@ -22,20 +22,6 @@ namespace Multi_Calculadora
             InitializeComponent();
         }
 
-        private void btn7_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.D7 || e.KeyCode == Keys.NumPad7)
-            {
-                // Aciona o botão 7 quando a tecla 7 é pressionada
-                btn7.PerformClick();
-            }
-        }
-
-        private void btn7_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
-        {
-
-        }
-
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -53,6 +39,8 @@ namespace Multi_Calculadora
 
         private void rtbResultado_TextChanged(object sender, EventArgs e)
         {
+            rtbResultado.SelectAll(); // seleciona todo o texto a direita
+            rtbResultado.SelectionAlignment = HorizontalAlignment.Right; // alinha o texto do resultado a direita
 
         }
 
@@ -199,6 +187,8 @@ namespace Multi_Calculadora
 
         private void rtbHistorico_TextChanged(object sender, EventArgs e)
         {
+            rtbHistorico.SelectAll(); // seleciona todo o texto contido no historico
+            rtbHistorico.SelectionAlignment = HorizontalAlignment.Right; // alinha o historico a direita
 
         }
     }

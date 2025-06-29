@@ -96,6 +96,7 @@
             ptbImc.Size = new Size(79, 76);
             ptbImc.TabIndex = 29;
             ptbImc.TabStop = false;
+            ptbImc.Click += ptbImc_Click;
             // 
             // Form2
             // 

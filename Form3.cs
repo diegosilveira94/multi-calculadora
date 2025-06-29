@@ -135,5 +135,10 @@ namespace Multi_Calculadora
         {
             botaoInverter = true; // Ativa o estado do botão de trocar sinal
         }
+
+        private void Form3_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -42,5 +42,12 @@ namespace Multi_Calculadora
             converter.Show();
             this.Visible = false;
         }
+
+        private void ptbImc_Click(object sender, EventArgs e)
+        {
+            Form converter = new Form4();
+            converter.Show();
+            this.Visible = false;
+        }
     }
 }
