@@ -124,6 +124,7 @@
             rtbPeso.TabStop = false;
             rtbPeso.Text = "Peso";
             rtbPeso.MouseClick += rtbPeso_MouseClick;
+            rtbPeso.TextChanged += rtbPeso_TextChanged;
             // 
             // label3
             // 
@@ -331,6 +332,7 @@
             btnVirgula.TabIndex = 57;
             btnVirgula.Text = ",";
             btnVirgula.UseVisualStyleBackColor = false;
+            btnVirgula.Click += btnVirgula_Click;
             // 
             // rtbIMC
             // 

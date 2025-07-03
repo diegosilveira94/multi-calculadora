@@ -12,10 +12,15 @@ namespace Multi_Calculadora
 {
     public partial class Form4 : Form
     {
-        bool limparTexto = true; // Variável para controlar se o texto deve ser limpo ao inserir um novo número
+        private string campoSelecionado = "peso"; // valor padrão
+
+        bool limparPeso = true; // Variável para controlar se o texto deve ser limpo ao inserir um novo número
+        bool limparAltura = true; // Variável para controlar se o texto deve ser limpo ao inserir um novo número
         bool botaoInverter = false; // Variável para controlar o estado do botão de trocar sinal
         double altura; // Variável para armazenar a altura do usuário
         double peso; // Variável para armazenar o peso do usuário
+
+
 
         public Form4()
         {
@@ -30,6 +35,7 @@ namespace Multi_Calculadora
             btn7.Click += BotaoNumero_Click;
             btn8.Click += BotaoNumero_Click;
             btn9.Click += BotaoNumero_Click;
+            btnVirgula.Click += BotaoNumero_Click;
         }
 
         private void rtbTemp1_TextChanged(object sender, EventArgs e)
@@ -58,15 +64,20 @@ namespace Multi_Calculadora
 
         private void BotaoNumero_Click(object sender, EventArgs e)
         {
-            if (limparTexto)
+            Button botao = (Button)sender;
+
+            if (campoSelecionado == "peso")
             {
-                rtbAltura.Clear();
-                rtbPeso.Clear();
-                limparTexto = false;
+                rtbPeso.Text += botao.Text;
+
+            }
+            if (campoSelecionado == "altura")
+            {
+                rtbAltura.Text += botao.Text;
+
             }
 
-            Button botao = (Button)sender;
-            rtbPeso.Text += botao.Text;
+
         }
 
         private void btn4_Click(object sender, EventArgs e)
@@ -108,8 +119,8 @@ namespace Multi_Calculadora
 
         private void btnConverter_Click(object sender, EventArgs e)
         {
-            peso = Convert.ToDouble(rtbPeso.Text); // Converte o texto do campo de entrada para decimal
-            altura = Convert.ToDouble(rtbAltura.Text); // Converte o texto do campo de entrada para decimal
+            peso = Convert.ToDouble(rtbPeso.Text.Replace(',', '.'));// Converte o texto do campo de entrada para decimal
+            altura = Convert.ToDouble(rtbAltura.Text.Replace(',', '.')); // Converte o texto do campo de entrada para decimal 
             double resultado = (double)(peso / (altura * altura)); // calculo do IMC
             if (resultado > 18.5)
             {
@@ -140,12 +151,22 @@ namespace Multi_Calculadora
 
         private void rtbAltura_MouseClick(object sender, MouseEventArgs e)
         {
-            rtbAltura.Clear(); // Limpa o campo de altura quando o usuário clica nele
+            campoSelecionado = "altura";
+            if (limparAltura)
+            {
+                rtbAltura.Clear();
+                limparAltura = false;
+            }
         }
 
         private void rtbPeso_MouseClick(object sender, MouseEventArgs e)
         {
-            rtbPeso.Clear(); // Limpa o campo de peso quando o usuário clica nele
+            campoSelecionado = "peso";
+            if (limparPeso)
+            {
+                rtbPeso.Clear();
+                limparPeso = false;
+            }
         }
 
         private void lblVoltar_Click_1(object sender, EventArgs e)
@@ -158,6 +179,16 @@ namespace Multi_Calculadora
         private void Form4_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit(); // Fecha a aplicação quando o formulário é fechado
+        }
+
+        private void rtbPeso_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnVirgula_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
