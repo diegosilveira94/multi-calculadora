@@ -370,6 +370,7 @@
             Name = "Form3";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Temperatura";
+            FormClosed += Form3_FormClosed;
             Load += Form3_Load;
             ResumeLayout(false);
             PerformLayout();

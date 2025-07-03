@@ -69,26 +69,6 @@ namespace Multi_Calculadora
             rtbPeso.Text += botao.Text;
         }
 
-        private void btn0_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn3_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btn4_Click(object sender, EventArgs e)
         {
 
@@ -166,6 +146,18 @@ namespace Multi_Calculadora
         private void rtbPeso_MouseClick(object sender, MouseEventArgs e)
         {
             rtbPeso.Clear(); // Limpa o campo de peso quando o usuário clica nele
+        }
+
+        private void lblVoltar_Click_1(object sender, EventArgs e)
+        {
+            Form converter = new Form2();
+            converter.Show();
+            this.Visible = false;
+        }
+
+        private void Form4_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit(); // Fecha a aplicação quando o formulário é fechado
         }
     }
 }

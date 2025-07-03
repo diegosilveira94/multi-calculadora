@@ -370,6 +370,7 @@
             Name = "Form5";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Moeda";
+            FormClosed += Form5_FormClosed;
             ResumeLayout(false);
             PerformLayout();
         }

@@ -162,5 +162,11 @@ namespace Multi_Calculadora
         {
             botaoInverter = true; // Ativa o estado do botão de trocar sinal
         }
+
+        private void Form5_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit(); // Fecha a aplicação quando o formulário é fechado
+        }
     }
 }
+

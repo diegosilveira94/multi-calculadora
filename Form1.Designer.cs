@@ -479,6 +479,7 @@
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Multi Calculadora";
+            FormClosed += Form1_FormClosed;
             Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();

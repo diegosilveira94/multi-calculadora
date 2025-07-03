@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form4));
             rtbAltura = new RichTextBox();
             btnInverter = new Button();
             lblConverter = new Label();
@@ -103,6 +104,9 @@
             lblVoltar.Size = new Size(24, 24);
             lblVoltar.TabIndex = 72;
             lblVoltar.Text = "↩";
+            lblVoltar.Click += lblVoltar_Click_1;
+            lblVoltar.MouseLeave += lblVoltar_MouseLeave;
+            lblVoltar.MouseMove += lblVoltar_MouseMove;
             // 
             // rtbPeso
             // 
@@ -369,8 +373,11 @@
             Controls.Add(btnConverter);
             Controls.Add(btn0);
             Controls.Add(btnVirgula);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form4";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "IMC";
+            FormClosed += Form4_FormClosed;
             ResumeLayout(false);
             PerformLayout();
         }

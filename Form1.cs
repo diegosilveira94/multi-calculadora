@@ -191,5 +191,10 @@ namespace Multi_Calculadora
             rtbHistorico.SelectionAlignment = HorizontalAlignment.Right; // alinha o historico a direita
 
         }
+
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit(); // Fecha a aplicação quando o formulário é fechado
+        }
     }
 }

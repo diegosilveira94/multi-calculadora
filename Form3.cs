@@ -140,5 +140,11 @@ namespace Multi_Calculadora
         {
 
         }
+
+        private void Form3_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit(); // Fecha a aplicação quando o formulário é fechado
+        }
     }
 }
+
