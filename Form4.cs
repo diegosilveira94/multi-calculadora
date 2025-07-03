@@ -119,33 +119,32 @@ namespace Multi_Calculadora
 
         private void btnConverter_Click(object sender, EventArgs e)
         {
-            peso = Convert.ToDouble(rtbPeso.Text.Replace(',', '.'));// Converte o texto do campo de entrada para decimal
-            altura = Convert.ToDouble(rtbAltura.Text.Replace(',', '.')); // Converte o texto do campo de entrada para decimal 
-            double resultado = (double)(peso / (altura * altura)); // calculo do IMC
-            if (resultado > 18.5)
+            peso = double.Parse(rtbPeso.Text); // Converte o texto do campo de entrada para decimal
+            altura = double.Parse(rtbAltura.Text); // Converte o texto do campo de entrada para decimal 
+            double resultado = (peso / (altura * altura)); // calculo do IMC
+            if (resultado < 18.5)
             {
-                rtbIMC.Text = "Abaixo do peso"; // Exibe o resultado formatado com duas casas decimais
+                rtbIMC.Text = "Abaixo do peso";
             }
             else if (resultado >= 18.5 && resultado <= 24.9)
             {
-                rtbIMC.Text = "Peso normal"; // Exibe o resultado formatado com duas casas decimais
+                rtbIMC.Text = "Peso normal";
             }
             else if (resultado >= 25 && resultado <= 29.9)
             {
-                rtbIMC.Text = "Sobrepeso"; // Exibe o resultado formatado com duas casas decimais
+                rtbIMC.Text = "Sobrepeso";
             }
             else if (resultado >= 30 && resultado <= 34.9)
             {
-                rtbIMC.Text = "Obesidade grau I"; // Exibe o resultado formatado com duas casas decimais
+                rtbIMC.Text = "Obesidade grau I";
             }
             else if (resultado >= 35 && resultado <= 39.9)
             {
-                rtbIMC.Text = "Obesidade grau II"; // Exibe o resultado formatado com duas casas decimais
+                rtbIMC.Text = "Obesidade grau II";
             }
             else
             {
-                rtbIMC.Text = "Obesidade grau III"; // Exibe o resultado formatado com duas casas decimais
-
+                rtbIMC.Text = "Obesidade grau III";
             }
         }
 

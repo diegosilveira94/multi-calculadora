@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "XhVrMUmQr94=",
+  "dgSpecHash": "3amzG3odtq8=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Windows\\OneDrive - SENAC-SC\\2025_1\\Introdução a Programação\\C#\\3. PROGRAMAS\\multi-calculadora\\multi-calculadora\\Multi Calculadora.csproj",
+  "projectFilePath": "C:\\Users\\diego.silveira\\OneDrive - SENAC-SC\\2025_1\\Introdução a Programação\\C#\\3. PROGRAMAS\\multi-calculadora\\multi-calculadora\\Multi Calculadora.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Windows\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+    "C:\\Users\\diego.silveira\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
   ],
   "logs": []
 }
